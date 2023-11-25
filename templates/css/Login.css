@@ -1,0 +1,201 @@
+img {
+    display: block;
+}
+
+body {
+    /* margin: 0;
+    padding: 0;
+    /* background-image: url("../images/imag2-transformed.png");*/
+   background-color: rgb(247,247,247);
+    /* background-repeat: repeat;
+    background-size: cover;
+    background-position: bottom; */ 
+    /* background: linear-gradient(to bottom right, #667eea, #764ba2);  */
+    /* font-family: sans-serif; */
+} 
+header {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   padding: 20px 10%;
+ }
+ nav {
+   display: flex;
+   padding: 2% 4%;
+   justify-content: space-between;
+   align-items: center;
+ }
+ 
+ .nav-links {
+   flex: 1;
+   text-align: right;
+   margin-left: 50px;
+ }
+ 
+ .nav-links ul li {
+   list-style: none;
+   display: inline-block;
+   padding: 1.5em 3em;
+   position: relative;
+ }
+ 
+ .nav-links ul li a {
+   font-weight: 800;
+   color: rgb(3, 3, 110);
+   text-decoration: none;
+   font-size: 25px;
+ }
+ 
+ .nav-links ul li::after {
+   content: "";
+   width: 0%;
+   height: 3px;
+   background: black;
+   display: block;
+   margin: auto;
+   transition: 0.3s;
+ }
+ 
+ .nav-links ul li:hover::after {
+   width: 100%;
+ }
+ .page-content {
+   display: flex;
+   justify-content: space-evenly;
+ }
+ 
+ .text-box h1 {
+   font-family:Arial, Helvetica, sans-serif;
+   color: rgb(0, 0, 0);
+   margin-bottom: 50px;
+   
+   /* text-decoration: underline; */
+ }
+ 
+ .text-box {
+   /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
+   color: black;
+   padding-top: 1%;
+   text-align: center;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: 30px;
+ }
+ 
+ .button1 {
+   margin-top: 4rem;
+   margin-left: 2rem;
+   height: 80px;
+   width: 200px;
+   border:rgb(0, 0, 0);
+   background-color: rgb(0, 16, 247);
+   border-radius: 10%;
+   
+ }
+ 
+ .button1 a {
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+   font-size: 30px;
+   font-weight: bold;
+   
+ }
+ 
+ .button1 a:hover {
+   color: rgb(0, 0, 0);
+ }
+ 
+.login-box {
+    width: 400px;
+    height: 550px;
+    background-color: #87ceebb3;
+    
+    border: 1px solid black;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10%;
+    top: 60%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+ .profile-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+ }
+
+ h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 1.5rem;
+ }
+
+ .login-box p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 18px;
+ }
+
+ .login-box input {
+    width: 100%;
+    margin-bottom: 20px ;
+ }
+
+ .login-box input[type="text"] , input[type="password"] {
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: black;
+ }
+
+ .login-box input[type="submit"] {
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    height: 40px;
+    background: black ;
+    color: white;
+    font-size: 18px;
+ }
+
+ .login-box input[type="submit"]:hover {
+    cursor: pointer;
+ }
+
+ .login-box a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    line-height: 20px;
+ }
+
+  .login-box a:hover{
+      color: red;
+  }
+
+.captcha-div-block {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+
+.preview {
+    color: #555;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-size: 32px;
+    color: black;
+}

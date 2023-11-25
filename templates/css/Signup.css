@@ -1,0 +1,215 @@
+img {
+    display: block;
+}
+body {
+    margin: 0;
+    padding:0 ;
+    /* background-image: url("../images/imag2-transformed.png");
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: bottom; */
+    background-color: rgb(247, 247, 247);
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 10%;
+  }
+  nav {
+    display: flex;
+    padding: 2% 4%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-links {
+    flex: 1;
+    text-align: right;
+    margin-left: 50px;
+  }
+
+.nav-links ul li {
+list-style: none;
+display: inline-block;
+padding: 1.5em 3em;
+position: relative;
+}
+
+.nav-links ul li a {
+font-weight: 800;
+color: rgb(3, 3, 110);
+text-decoration: none;
+font-size: 25px;
+}
+
+.nav-links ul li::after {
+content: "";
+width: 0%;
+height: 3px;
+background: black;
+display: block;
+margin: auto;
+transition: 0.3s;
+}
+
+.nav-links ul li:hover::after {
+width: 100%;
+}
+
+.container {
+    margin-left: 80vh;
+            align-items: center;
+            min-height: 100vh;
+            /* top: 60%;
+            left: 50%; */
+    /* position: relative;*/
+}
+
+.form-box {
+    margin-top: 150px;
+    position: relative;
+    width: 400px;
+    height: 550px;
+    border: 2px solid black;
+   
+    border-radius: 10%;
+    display: flex;
+    background-color: #87ceebb3;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px 30px; */
+      
+}
+.profile-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+.form-box h2 {
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+.form-box .input-box {
+    position: relative;
+    margin: 30px 0px;
+    width: 310px;
+    font-size: 1.5rem;
+    /* border-bottom: 2px solid white; */
+
+}
+
+.form-box .input-box input {
+    width: 100%;
+    height: 45px;
+    border: none;
+    background-color: white;
+    border-radius: 20px;
+    outline: none;
+    padding: 0px 20px 0px 5px;
+    color: white;
+}
+
+i {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+
+}
+
+input::placeholder{
+    text-align: left;
+    color: black;
+}
+
+.btn {
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    color: white;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+
+}
+
+.group {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.group span a {
+    color: black;
+    position: relative;
+    top: 10%;
+    text-decoration: none;
+}
+
+.group a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+#result {
+    color: red;
+    font-weight: bold;
+    position: relative;
+    top:25px;
+}
+
+.popup {
+    width: 400px;
+    background-color: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50% ,-50%) scale(0);
+    transition: transform .4s , top .4s;
+    text-align: center;
+    padding: 0px 30px 30px;
+    height: 330px;
+    color: black;
+     
+}
+
+#checkmark {
+    font-size: 50px;
+}
+
+.popup button {
+    width: 100%;
+    background: rgb(29, 168, 39);
+    padding: 10px 0;
+    margin-top: 50px;
+    border: none;
+    outline:none;
+    font-size: 18px;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.popup a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.open-slide {
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    visibility: visible;
+}

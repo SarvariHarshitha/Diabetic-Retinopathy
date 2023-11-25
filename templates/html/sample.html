@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .i {
+            border-radius: 1em;
+        }
+
+        .header {
+            min-height: 100vh;
+            width: 100%;
+            /* background-image:url("backgroundstar.jpg"); */
+            /* background-color: #282829; */
+            /* background-color: #0f0e13; */
+            background-color: #1b1b1e;
+            background-image:
+                radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+                radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
+                radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+
+        }
+
+        nav {
+            display: flex;
+            padding: 2% 4%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            flex: 1;
+            text-align: right;
+            margin-right: 1em;
+        }
+
+        .nav-links ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 1.5em 3em;
+            position: relative;
+        }
+
+        .nav-links ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .nav-links ul li::after {
+            content: '';
+            width: 0%;
+            height: 3px;
+            background: #d3e023;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+
+        .eyeImage {
+            width: 100px;
+            height: 200px;
+            margin-top: 7%;
+            margin-left: 10%;
+            border-radius: 1em;
+        }
+
+        .text-box {
+            margin-left: 25%;
+            width: 100%;
+            color: white;
+            position: absolute;
+            top: 30%;
+            align-items: center;
+            text-align: center;
+        }
+
+        .text-box h1 {
+            font-size: 30px;
+            font-weight: 300;
+        }
+
+        .subHeading {
+            padding: 2em 2em;
+            border-radius: 2em;
+            margin-top: 0em;
+            font-size: 20px;
+            color: grey;
+        }
+
+        .button1 {
+            margin-top: -10em;
+            padding: .6em .6em;
+            border-radius: 1em;
+            background-color: rgb(235, 170, 170);
+        }
+
+        .user {
+            margin-top: -5em;
+            width: 100%;
+            color: white;
+            top: 30%;
+            align-items: center;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 300;
+        }
+
+        .userHeading {
+            align-items: center;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 300;
+            color: rgb(119, 115, 115);
+            margin-bottom: 2em;
+        }
+
+        .user {
+            background-color: #1b1b1e;
+
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+            width: 400px;
+            align-items: center;
+            margin: auto;
+            background-color: rgba(43, 42, 42, 0.5);
+            background-image:
+                radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+                radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
+                radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+            box-shadow: inset -5px -5px rgba(0, 0, 0, 0.5);
+            border-radius: 25px;
+        }
+
+        .box11 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding: 8px;
+            width: 65%;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            background-color: rgba(59, 58, 58, 0.5);
+            box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        .box2,
+        .box3,
+        .box4,
+        .form-control {
+            padding: 8px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            width: 65%;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            background-color: rgba(59, 58, 58, 0.5);
+            box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        .form-label {
+            color: white;
+            font-size: .6em;
+            font-weight: 300;
+        }
+
+        .btn-lg {
+            font-weight: 300;
+            font-size: 0.6em;
+            margin-top: 0em;
+            padding: 0.5em 0.5em;
+            border-radius: .8em;
+            background-color: rgb(235, 170, 170);
+        }
+
+
+        .button1:hover {
+            background-color: rgb(230, 105, 105);
+        }
+
+        .hero-btn {
+            margin-top: -4em;
+            text-decoration: none;
+            font-size: 1.3em;
+            color: rgb(32, 31, 31);
+        }
+
+        .services {
+            margin-top: -2em;
+            background-color: #1b1b1e;
+        }
+
+        .head {
+            width: 100%;
+            color: white;
+            /* position: absolute; */
+            top: 30%;
+            align-items: center;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 300;
+        }
+
+        .subHeading2 {
+            align-items: center;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 300;
+            color: rgb(119, 115, 115);
+        }
+
+        .neurons {
+            width: 500px;
+            height: 300px;
+            margin-top: 5%;
+            margin-left: 10%;
+            border-radius: 1em;
+        }
+
+        .info {
+            margin-left: 25%;
+            width: 100%;
+            color: white;
+            position: relative;
+            margin-top: -320px;
+            text-align: center;
+        }
+
+        .info h1 {
+            font-size: 25px;
+            font-weight: 300;
+
+        }
+
+        .subHeading3 {
+            padding: 2em 2em;
+            border-radius: 2em;
+            margin-top: -2em;
+            font-size: 20pcx;
+            color: grey;
+            display: inline-block;
+            text-align-last: left;
+        }
+
+        .details {
+            margin-top: 10px;
+            width: 100%;
+            color: white;
+            position: absolute;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 300;
+        }
+
+        .map {
+            margin-top: rem;
+            margin-left: 5%;
+            border-radius: 1em;
+        }
+
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+            color: white;
+        }
+
+        .footer h4,
+        p {
+            margin-bottom: 10px;
+            margin-top: 5px;
+            font-weight: 600;
+            color: rgb(82, 81, 81);
+        }
+
+        .icons .fa {
+            margin-top: -10em;
+            color: rgb(221, 61, 80);
+            margin: 0 10px;
+            cursor: pointer;
+            padding: 10px 0;
+            font-size: 1.5em;
+        }
+    </style>
+    <title>i-Help</title>
+    <script>(function (w, d) { w.CollectId = "63ab369c50094935eaaa0c92"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async = true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+</head>
+
+<body>
+    <section class="first">
+        <section class="header">
+            <nav>
+                <a href=""><img src="static\logo.png" width="70px" height="40px"><img class="i" src="static\ss.png"
+                        width="100px" height="40px"></a>
+                <!-- <p class="tagline">Your personal Eyecare buddy</p> -->
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">LOGIN</a></li>
+                        <li><a href="">SIGN UP</a></li>
+                        <li><a href="">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="box1">
+                <img src="static\eye4.jpg" class="neurons" width="200px"></img>
+                <div class="text-box">
+                    <h1>Your Personal Eyecare Buddy</h1>
+                    <p class="subHeading">With modern technology and deep learning model <br>we provide patients with
+                        quick
+                        information<br> about their current stage of diabetic retinopathy
+                        <br>by analizing their eye scans
+                    </p>
+                    <button class="button1"><a href="" class="hero-btn">Click here</a></button>
+                </div>
+            </div>
+        </section><br><br><br><br><br><br>
+        <section class="user">
+            <p class="user">Enter User's details:</p>
+            <p class="userHeading">A quick diabetic retinopathy test just a click away...</p>
+            <form action="/" class="form" method="post" enctype="multipart/form-data">
+
+                <input type="text" name="name" class="box11" placeholder="Enter Patient's name">
+                <input type="email" name="emailId" class="box2" placeholder="Enter email Id">
+                <input type="text" name="contact" class="box3" placeholder="Enter contact no">
+                <input type="number" name="username" class="box4" placeholder="Enter age">
+                <label class="form-label" for="form3Examplec">Upload eye scan</label>
+                <input type="file" class="form-control" id="customFile" name="imagefile"><br><br>
+                <button type="Predict Image" class="btn-lg" onclick="fn1()">Predict </button>
+            </form>
+            <br><br><br>
+        </section>
+
+        
+        <section class="services">
+            <p class="head">More about us:</p>
+            <p class="subHeading2">To detect diabetic retinopathy using eye scans. Modern solution to detect the<br> eye
+                defect in the early stages</p>
+            <img src="static\eyegifproj.gif" class="neurons"></img>
+            <div class="info">
+                <h1>Retinopathy</h1>
+                <p class="subHeading3">Retinopathy is a condition which develops in the eye. If not treated at<br> the
+                    early
+                    stages it could lead to permanent blindness</p>
+                <h1>Service we provide</h1>
+                <p class="subHeading3">With modern technology and deep learning model we provide the<br> patient quick
+                    information
+                    about their current state of diabetic<br> retinopathy by analysing the eye scans
+                </p>
+                <h1>Patient's report</h1>
+                <p class="subHeading3">Categorizes the eye scans based on the severity using neural network<br>
+                    algorithms and
+                    sends the severity reports to the patients mail id to<br> undergo
+                    further treatment</p>
+            </div><br><br>
+            <div class="details">Get More Details Here</div><br><br><br><br>
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31105.11358333144!2d77.66648757910154!3d12.96294340000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae122cf061d49d%3A0xed65279d00137700!2sVasan%20Eye%20Care%20-%20Marathahalli!5e0!3m2!1sen!2sin!4v1671983951826!5m2!1sen!2sin"
+                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <section class="footer">
+            <h4>About us</h4>
+            <p>i-Help Your personal eye care buddy</p>
+            <div class="icons">
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-linkedin"></i>
+                <i class="fa fa-instagram"></i>
+                <p>2023 All Rights Reserved By i-Help</p>
+                <p>Nischith T N, P Malvika Reddy, Manik Gupta, Niharika Bhattacharya</p>
+            </div>
+        </section>
+
+</body>
+
+</html>

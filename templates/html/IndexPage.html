@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <script>(function(w, d) { w.CollectId = "6553963e20465d1aa0f1a529"; 
+    var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); 
+    s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); 
+    h.appendChild(s); })(window, document);</script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  /* background-color: #1b1b1e;
+    background-image:
+    radial-gradient(at 0% 0%, rgb(17, 19, 23) 0, transparent 50%),
+    radial-gradient(at 50% 0%, rgb(83, 53, 132) 0, transparent 50%),
+    radial-gradient(at 100% 0%, rgb(140, 47, 80) 0, transparent 50%); */
+    /* background-image: linear-gradient(to left, #0F3443 , #80d5b2); */
+  /* background-repeat: no-repeat; */
+  background-color: rgb(247, 247, 247);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+nav {
+  display: flex;
+  padding: 2% 4%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+  margin-left: 50px;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 1.5em 3em;
+  position: relative;
+}
+
+.nav-links ul li a {
+  font-weight: 800;
+  color: rgb(3, 3, 110);
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: black;
+  display: block;
+  margin: auto;
+  transition: 0.3s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.page-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.text-box h1 {
+  font-family:Arial, Helvetica, sans-serif;
+  color: rgb(0, 0, 0);
+  margin-bottom: 50px;
+  
+  /* text-decoration: underline; */
+}
+
+.text-box {
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
+  color: black;
+  padding-top: 1%;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px;
+}
+
+.button1 {
+  margin-top: 4rem;
+  margin-left: 2rem;
+  height: 80px;
+  width: 200px;
+  border:rgb(0, 0, 0);
+  background-color: rgb(0, 16, 247);
+  border-radius: 10%;
+  
+}
+
+.button1 a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  
+}
+
+.button1 a:hover {
+  color: rgb(0, 0, 0);
+}
+</style>
+</head>
+<body>
+    <section class="entire-page">
+        <header>   
+            <a href="IndexPage.html"><img src="static/images/logo.png" alt="" width="200px" height="100px" ></a>
+            <h1 style="font-size: 50px; font-weight: bolder;">WE - I - Care</h1>
+            <nav>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="IndexPage.html">HOME</a></li>
+                        <li><a href="Login.html">LOGIN</a></li>
+                        <li><a href="Signup.html">SIGN UP</a></li>
+                        <li><a href="ContactUs.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <br><br>
+        <div class="page-content">
+            <img src="static/images/imag2-transformed.png" class="neurons" width="500px" height="500px" style="border-radius: 10%;"></img>
+            <div class="text-box">
+                <h1>Your Personal Eyecare Buddy</h1>
+                <p class="subHeading">With modern technology and deep learning model <br>we provide patients with
+                    quick
+                    information<br> about their current stage of diabetic retinopathy
+                    <br>by analizing their eye scans
+                </p>
+                <button class="button1"><a href="Login.html" class="hero-btn">Click here</a></button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

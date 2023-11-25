@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-signin-client_id" content="1036833861465-3r3giv5ju9s90osuarob5a9httv1g2fb.apps.googleusercontent.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+        img {
+            display: block;
+        }
+        
+        body {
+            /* margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #667eea, #764ba2); 
+             /* background-image: url("static/images/imag2-transformed.png");  */
+             /* background-repeat: repeat;
+            background-size: cover;
+            background-position: bottom; 
+            font-family: sans-serif; */
+            /* background-image: linear-gradient(to left, #0F3443 , #34E89E); */
+            background-color:rgb(247,247,247);
+            
+            
+        } 
+  
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+nav {
+  display: flex;
+  padding: 2% 4%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+  margin-left: 50px;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 1.5em 3em;
+  position: relative;
+}
+
+.nav-links ul li a {
+  font-weight: 800;
+  color: rgb(3, 3, 110);
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: black;
+  display: block;
+  margin: auto;
+  transition: 0.3s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+.page-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.text-box h1 {
+  font-family:Arial, Helvetica, sans-serif;
+  color: rgb(0, 0, 0);
+  margin-bottom: 50px;
+  
+  /* text-decoration: underline; */
+}
+
+.text-box {
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
+  color: black;
+  padding-top: 1%;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px;
+}
+
+.button1 {
+  margin-top: 4rem;
+  margin-left: 2rem;
+  height: 80px;
+  width: 200px;
+  border:rgb(0, 0, 0);
+  background-color: rgb(0, 16, 247);
+  border-radius: 10%;
+  
+}
+
+.button1 a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+
+}
+
+.button1 a:hover {
+  color: rgb(0, 0, 0);
+}
+
+        .login-box {
+            width: 400px;
+            height: 550px;
+            background-color: #87ceebb3;
+            
+    border: 1px solid black;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10%;
+            top: 60%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            padding: 70px 30px;
+        }
+        
+         .profile-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: -50px;
+            left: calc(50% - 50px);
+         }
+        
+         h1 {
+            margin: 0;
+            padding: 0 0 20px;
+            text-align: center;
+            font-size: 1.5rem;
+         }
+        
+         .login-box p {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+            font-size: 24px;
+         }
+        
+         .login-box input {
+            width: 100%;
+            margin-bottom: 20px ;
+         }
+        
+         .login-box input[type="text"] , input[type="password"] {
+            border: none;
+            border-bottom: 1px solid black;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: black;
+            font-weight: bold;
+            font-size: large;
+         }
+        
+         .login-box input[type="submit"] {
+            border: none;
+            border-radius: 25px;
+            outline: none;
+            height: 40px;
+            background: black ;
+            color: white;
+            font-size: 18px;
+         }
+        
+         .login-box input[type="submit"]:hover {
+            cursor: pointer;
+         }
+        
+         .login-box a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.2rem;
+            line-height: 20px;
+            padding-right:40px;
+            font-weight:bold;
+         }
+        
+          .login-box a:hover{
+              color: red;
+          }
+        
+        .captcha-div-block {
+            width: 100%;
+            display: flex;
+            gap: 5px;
+        }
+        
+        .preview {
+            color: #555;
+            width: 100%;
+            text-align: center;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            font-size: 32px;
+            color: black;
+        }
+    </style>
+        
+    <title>Login Page</title>
+</head>
+<body>
+  <header>   
+    <a href="IndexPage.html"><img src="static/images/logo.png" alt="" width="200px" height="100px" ></a>
+    <h1 style="font-size: 50px; font-weight: bolder;">WE - I - Care</h1>
+    <nav>
+        <div class="nav-links">
+            <ul>
+                <li><a href="IndexPage.html">HOME</a></li>
+                <!-- <li><a href="">PREDICT</a></li> -->
+                <li><a href="Login.html">LOGIN</a></li>
+                <li><a href="Signup.html">SIGN UP</a></li>
+                <li><a href="ContactUs.html">CONTACT US</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+    <div class="main">
+        <div class="login-box">
+            <img src="static/images/icons.png" class="profile-logo" alt="">
+            <h1 style="font-size: 2rem;">Login</h1>
+            <form action="/afterlogin" method="POST" id="demo-form">
+            <p>Username</p>
+            <input type="text" placeholder="Enter Username..." name="username">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password...">
+
+            <div class="captcha-div-block">
+                <div class="g-recaptcha" 
+                data-sitekey="6LeoZxEpAAAAAKqIIh2wJScas_g_uzzwaJ_jd6bF"></div>
+            </div>
+            <br>
+            <input type="submit" value="Login" name="login">
+            <p style="color:red;font-weight:bold;">{{message}}</p>
+            <a href="ForgotPassword.html">Forgot Password?</a>
+            <a href="Signup.html">Sign Up</a>
+            <br><br>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+           <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+
+        </form>
+        </div>
+    </div>
+</body>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+<script>
+
+  function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
+    console.log('statusChangeCallback');
+    console.log(response);                   // The current login status of the person.
+    if (response.status === 'connected') {   // Logged into your webpage and Facebook.
+      testAPI();  
+    } else {                                 // Not logged into your webpage or we are unable to tell.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this webpage.';
+    }
+  }
+
+
+  function checkLoginState() {               // Called when a person is finished with the Login Button.
+    FB.getLoginStatus(function(response) {   // See the onlogin handler
+      statusChangeCallback(response);
+    });
+  }
+
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{1515750219211498}',
+      cookie     : true,                     // Enable cookies to allow the server to access the session.
+      xfbml      : true,                     // Parse social plugins on this webpage.
+      version    : '{api-version}'           // Use this Graph API version for this call.
+    });
+
+
+    FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
+      statusChangeCallback(response);        // Returns the login status.
+    });
+  };
+ 
+  function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+  }
+
+</script>
+
+
+
+
+
+<script>
+    function onSubmit(token) {
+      document.getElementById("demo-form").submit();
+    }
+  </script>
+
+
+</html>

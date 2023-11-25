@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+        img {
+            display: block;
+        }
+        body {
+            margin: 0;
+            padding:0 ;
+            /* background-image: url("static/images/imag2-transformed.png");
+            background-repeat: repeat;
+            background-size: cover;
+            background-position: bottom; */
+            background-color: rgb(247, 247, 247);
+        }
+        
+        header {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          padding: 20px 10%;
+        }
+        nav {
+          display: flex;
+          padding: 2% 4%;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .nav-links {
+          flex: 1;
+          text-align: right;
+          margin-left: 50px;
+        }
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 1.5em 3em;
+  position: relative;
+}
+
+.nav-links ul li a {
+  font-weight: 800;
+  color: rgb(3, 3, 110);
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: black;
+  display: block;
+  margin: auto;
+  transition: 0.3s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+        .container {
+            margin-left: 90vh;
+            margin-top:0vh;
+            align-items: center;
+            min-height: 100vh;
+            top: 60%;
+            left: 50%;
+            /* position: relative; */
+        }
+        
+        .form-box {
+            margin-top: 50px;
+            position: relative;
+            width: 400px;
+            height: 550px;
+            border: 2px solid black;
+            border-radius: 10%;
+            position: relative;
+            display: flex;
+            background-color: #87ceebb3;
+            justify-content: center;
+            align-items: center;
+            /* padding: 20px 30px; */
+            font-size:24px;
+           
+              
+        }
+        .profile-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: -50px;
+            left: calc(50% - 50px);
+        }
+        
+        .form-box h2 {
+            color: black;
+            text-align: center;
+            font-size: 2rem;
+            padding-top:20px;
+        
+        }
+        
+        .form-box .input-box {
+            position: relative;
+            margin: 30px 0px;
+            width: 310px;
+            font-size: 1.5rem;
+            /* border-bottom: 2px solid white; */
+        
+        }
+        
+        .form-box .input-box input {
+            width: 100%;
+            height: 45px;
+            border: none;
+            background-color: white;
+            top: 60%;
+            left: 50%;
+            border-radius: 20px;
+            outline: none;
+            padding: 0px 20px 0px 5px;
+            color: black;
+        }
+        
+        i {
+            position: absolute;
+            right: 10px;
+            top: 15px;
+        
+        }
+        
+        input::placeholder{
+            text-align: left;
+            color: black;
+            font-size: 1.2rem;
+        }
+        
+        .btn {
+            background-color: black;
+            width: 100%;
+            height: 50px;
+            color: white;
+            border-radius: 30px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+        
+        }
+        .btn:hover{
+            color:yellow;
+        }
+        .group {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .group span a {
+            color: black;
+            font-size: 1.3rem;
+            font-weight: bold;
+            position: relative;
+            top: 10%;
+            text-decoration: none;
+        }
+        
+        .group a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+        
+        #result {
+            color: red;
+            font-weight: bold;
+            position: relative;
+            top:25px;
+        }
+        
+        .popup {
+            width: 400px;
+            background-color: white;
+            border-radius: 6px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50% ,-50%) scale(0);
+            transition: transform .4s , top .4s;
+            text-align: center;
+            padding: 0px 30px 30px;
+            height: 330px;
+            color: black;
+             
+        }
+        
+        #checkmark {
+            font-size: 50px;
+        }
+        
+        .popup button {
+            width: 100%;
+            background: rgb(29, 168, 39);
+            padding: 10px 0;
+            margin-top: 50px;
+            border: none;
+            outline:none;
+            font-size: 18px;
+            color: black;
+            border-radius: 10px;
+            cursor: pointer;
+        
+        }
+        
+        .popup a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        
+        .open-slide {
+            top: 50%;
+            transform: translate(-50%,-50%) scale(1);
+            visibility: visible;
+        }
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>   
+        <a href="IndexPage.html"><img src="static/images/logo.png" alt="" width="200px" height="100px" ></a>
+        <h1 style="font-size: 50px; font-weight: bolder;">WE - I - Care</h1>
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="IndexPage.html">HOME</a></li>
+                    <!-- <li><a href="">PREDICT</a></li> -->
+                    <li><a href="Login.html">LOGIN</a></li>
+                    <li><a href="Signup.html">SIGN UP</a></li>
+                    <li><a href="ContactUs.html">CONTACT US</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v18.0" nonce="I19y3SGL"></script>
+    <div class="container">
+        <div class="form-box">
+            <img src="static/images/icons.png" class="profile-logo" alt="">
+            <form action="/afterreg" method="POST" name="Formfill" onsubmit="return validation()">
+                <h2>Register</h2>
+                <p id="result"></p>
+                 <div class="input-box">
+                    <i class='bx bxs-user'></i>
+                    <input type="text" name="username" placeholder="Enter Username...">
+                 </div>
+                <div class="input-box">
+                    <i class='bx bxs-envelope'></i>
+                    <input type="email" name="email" placeholder="Enter Email...">
+                </div>
+                <div class="input-box">
+                    <i class='bx bxs-lock-alt'></i>
+                    <input type="password" name="password" placeholder="Enter Password...">
+                </div>
+                <div class="input-box">
+                    <i class='bx bxs-lock-alt'></i>
+                    <input type="password" name="cpassword" placeholder="Confirm Password...">
+                </div>
+                <div class="button">
+                    <input type="submit" class="btn" onclick="validation()" value="Sign Up">
+                </div>
+                <div class="group">
+                    <span><a href="ForgotPassword.html">Forgot Password?</a></span><br>
+                    <span><a href="Login.html">Login</a></span>
+                </div>
+            </form>
+        </div>
+        <div class="popup" id="popup">
+            <h2>Thank You</h2>
+            <p>You are Registered Successfully!!</p>
+            <p>Thanks for Registering!!</p>
+            <a href="Login.html"><button onclick="close()">OK</button></a>
+            
+</div>
+        </div>
+    </div>
+</body>
+<script src="templates/js/Signup.js"></script>
+
+</html>
